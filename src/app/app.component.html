@@ -1,0 +1,14 @@
+<title>Socket IO</title>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>-->
+<!--<link href="style.css" rel="stylesheet"/>-->
+<div class="mario-chat">
+  <input name="message" type="text" placeholder="Message" [(ngModel)]="room"/>
+
+  <div class="chat-window">
+    <div class="output"><p *ngFor="let item of incomingMessage">{{item.user+': '+item.message}}</p></div>
+    <div class="feedback"></div>
+  </div>
+  <input name="user" type="text" placeholder="User" [(ngModel)]="user"/>
+  <input name="message" type="text" placeholder="Message" [(ngModel)]="message"/>
+  <button name="send" type="submit" (click)="sendMessage()">Send</button>
+</div>
